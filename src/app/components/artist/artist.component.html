@@ -1,0 +1,20 @@
+<div *ngIf="artists">
+    <div class="jumbotron d-flex justify-content-around">
+        <div>
+            <div *ngIf="artists['images'].length > 0">
+                <img [src]="artists.images[0].url" class="img-thumbnail" width="200" height="200" alt="">
+            </div>
+            <h4 class="mt-2">{{ artists.name }}</h4>
+            <p> Popularity: {{ artists.popularity }}</p>
+            <p> Followers: {{ artists.followers.total }}</p>
+            <p *ngIf="artists['genres'].length > 0">
+                Genres: <span *ngFor="let item of artists['genres']" class="badge badge-success mx-2">{{ item }}</span>
+            </p>
+        </div>
+        <div class="align-self-center">
+            <h1 class="display-3"> Albums Of {{ artists.name }}</h1>
+        </div>
+    </div>
+</div>
+<hr>
+<app-albums></app-albums>

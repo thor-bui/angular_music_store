@@ -1,0 +1,16 @@
+<div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4 text-center font-weight-bold">SPOTIFY SEARCH</h1>
+</div>
+<div class="container mt-5">
+    <input type="text" class="form-control" [formControl]="inputField">
+    <ul class="list-group" style="height: 300px; overflow-y: auto; border-bottom:1px solid #eee ;">
+        <li class="list-group-item" *ngFor="let item of listItems">
+            <a [routerLink]="['/artist', item.id]">
+                <div>
+                    <img [src]="item.images[2]?.url" width="50" height="50" alt="">
+                    <span class="ml-4">{{ item.name }}</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

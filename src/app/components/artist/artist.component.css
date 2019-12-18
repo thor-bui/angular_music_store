@@ -1,0 +1,9 @@
+.jumbotron {
+    background: rgb(34, 193, 195) !important;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(244, 226, 189, 1) 100%) !important;
+    color: #eee !important;
+}
+
+h1 {
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+}
